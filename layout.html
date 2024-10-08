@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Industry Visualizations</title>
+    <!-- Pure.css links for grid and styles -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
+    <style>
+        /* Background and general body styling */
+        html, body {
+            background-color: #e0e6f8;
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+        }
+
+        /* Title styling */
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        /* Subtitle styling */
+        p.subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+
+        /* Container for content */
+        .content {
+            padding: 20px;
+        }
+
+        /* Visualization container */
+        .visualization {
+            padding: 20px;
+            background-color: white;
+            margin-bottom: 40px;
+        }
+
+        /* Styling for iframes */
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        /* Layout for text above visualization */
+        .description {
+            margin-bottom: 10px;
+            color: #555;
+            text-align: center;
+        }
+
+        /* Align the content in the middle */
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Flexbox layout to avoid white space */
+        .visualization-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .visualization-inline {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        /* Ensure radar chart and heatmap fit together */
+        .inline-visual {
+            width: 48%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <h1>AI Industry Visualizations</h1>
+        <p class="subtitle">This layout presents insights into the AI industry using different visualization types.</p>
+
+        <!-- First row with Choropleth Map only -->
+        <div class="visualization-container">
+            <div class="pure-u-1">
+                <div class="description">
+                    <h2>Choropleth Map of AI Adoption by Region</h2>
+                    <p>This map visualizes the adoption level of AI technologies across different regions.</p>
+                </div>
+                <div class="visualization">
+                    <!-- Embedding the Choropleth Map using iframe -->
+                    <iframe src="Map.html"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second row with Radar Chart and Heatmap side by side -->
+        <div class="visualization-inline">
+            <!-- Radar Chart -->
+            <div class="inline-visual">
+                <div class="description">
+                    <h2>Radar Chart of AI Industry Indicators</h2>
+                    <p>This radar chart compares key indicators such as Talent, Infrastructure, and Research in the AI sector.</p>
+                </div>
+                <div class="visualization">
+                    <iframe src="Radar_chart.html"></iframe>
+                </div>
+            </div>
+
+            <!-- Heatmap -->
+            <div class="inline-visual">
+                <div class="description">
+                    <h2>Heatmap of AI Industry Skills vs. Automation Risk</h2>
+                    <p>This heatmap shows the relationship between AI-related skills and the automation risk levels in the industry.</p>
+                </div>
+                <div class="visualization">
+                    <iframe src="Heatmap.html"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Third row with Treemap only -->
+        <div class="visualization-container">
+            <div class="pure-u-1">
+                <div class="description">
+                    <h2>Treemap of AI Jobs by Industry</h2>
+                    <p>This treemap represents the distribution of AI-related jobs across various industries.</p>
+                </div>
+                <div class="visualization">
+                    <iframe src="Treemap.html"></iframe>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
